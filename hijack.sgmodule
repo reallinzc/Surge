@@ -1,0 +1,7 @@
+#!name=Dlercloud 订阅hijack
+#!desc=
+
+[Host]
+*.laowanxiang.com = server:https://dns.alidns.com/dns-query
+dler.cloud = server:https://dns.alidns.com/dns-query
+dlercloud.com = server:https://dns.alidns.com/dns-query
