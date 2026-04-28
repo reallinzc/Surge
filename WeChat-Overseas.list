@@ -1,0 +1,26 @@
+# NAME: WeChat-Overseas
+# DESC: WeChat overseas (HK/SG) server IP CIDRs only — NO weixin domain rules.
+# SOURCE: filtered from NobyDa/Script/Surge/WeChat.list
+# METHOD: ip-api.com geoip + tcpping/icmp from CN-mainland probe (aliyunsz, AS37963 阿里云广州)
+#   - kept: CIDRs with RTT >= 50ms from CN, plus 2 segments no_response (GFW-blocked, same AS132203 prefix)
+#   - dropped: CIDRs with RTT < 50ms (CN mainland) and all IPv6 (NobyDa list IPv6 = CN ISP only)
+# DO NOT add weixin.com / weixin.qq.com / wechat.com domain rules together with this list.
+# UPDATED: 2026-04-29
+
+# Tencent Cloud Singapore (AS132203)
+IP-CIDR,43.156.86.0/24,no-resolve
+IP-CIDR,43.156.222.0/24,no-resolve
+IP-CIDR,101.32.104.0/24,no-resolve
+IP-CIDR,101.32.118.0/24,no-resolve
+IP-CIDR,101.32.133.0/24,no-resolve
+IP-CIDR,101.33.110.0/24,no-resolve
+IP-CIDR,129.226.3.0/24,no-resolve
+IP-CIDR,150.109.90.0/24,no-resolve
+
+# Tencent Cloud Hong Kong (AS132203)
+IP-CIDR,129.226.107.0/24,no-resolve
+IP-CIDR,203.205.232.0/24,no-resolve
+IP-CIDR,203.205.234.0/24,no-resolve
+IP-CIDR,203.205.235.0/24,no-resolve
+IP-CIDR,203.205.253.0/24,no-resolve
+IP-CIDR,203.205.254.0/24,no-resolve
