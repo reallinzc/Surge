@@ -10,7 +10,7 @@
 DOMAIN,console.po0.com,DIRECT,extended-matching
 
 [Script]
-po0-fw-cron = type=cron,cronexp="*/5 * * * *",script-path=https://raw.githubusercontent.com/reallinzc/Surge/main/scripts/po0-firewall-whitelist.js,timeout=60,argument="tokens={{{tokens}}}"
+po0-fw-cron = type=cron,cronexp="*/2 * * * *",script-path=https://raw.githubusercontent.com/reallinzc/Surge/main/scripts/po0-firewall-whitelist.js,timeout=60,argument="tokens={{{tokens}}}"
 po0-fw-event = type=event,event-name=network-changed,script-path=https://raw.githubusercontent.com/reallinzc/Surge/main/scripts/po0-firewall-whitelist.js,timeout=60,argument="tokens={{{tokens}}}"
 po0-fw-panel = type=generic,script-path=https://raw.githubusercontent.com/reallinzc/Surge/main/scripts/po0-firewall-whitelist.js,timeout=60,argument="tokens={{{tokens}}}"
 
