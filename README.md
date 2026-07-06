@@ -12,7 +12,7 @@
 - **面板**：显示白名单 IP 与坑位占用（不显示 token），蜂窝加白的 IP 标 📶，当前出口标 ←。
 - **安静**：KV 记录状态，仅在失败、限频或消耗新坑位时通知。
 
-图文教程：<https://rfcjpco.rlyio.com/>
+图文教程：<https://po0fw.rlyio.com/>
 
 **一键安装（Surge iOS / Mac）：**
 
