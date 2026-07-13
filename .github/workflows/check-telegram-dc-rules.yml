@@ -1,0 +1,17 @@
+name: Check Telegram DC rules
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate official CIDRs and current DC endpoints
+        run: python3 scripts/update_telegram_dc_rules.py --check

@@ -1,0 +1,12 @@
+# NAME: TelegramDC-Singapore
+# DESC: Telegram DC5 address space routed through the Singapore V.PS node
+# SOURCE: https://core.telegram.org/resources/cidr.txt
+# DC-ENDPOINTS: https://core.telegram.org/getProxyConfig
+# REGION-REFERENCE: https://raw.githubusercontent.com/Repcz/Tool/X/Surge/Custom/Telegram.list
+# NOTE: 149.154.168.0/22 is split from AS62041 by live Singapore route evidence.
+
+IP-ASN,62014,no-resolve
+IP-CIDR,91.108.16.0/22,no-resolve
+IP-CIDR,91.108.56.0/22,no-resolve
+IP-CIDR,149.154.168.0/22,no-resolve
+IP-CIDR6,2001:b28:f23f::/48,no-resolve
