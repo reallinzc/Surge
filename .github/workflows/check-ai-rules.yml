@@ -1,0 +1,31 @@
+name: Check AI rules
+
+on:
+  push:
+    paths:
+      - 'AI*.list'
+      - 'AppleIntelligence.list'
+      - 'sources/chatgpt-voice.json'
+      - 'scripts/ai_rules.py'
+      - 'tests/ai-routing.json'
+      - '.github/workflows/check-ai-rules.yml'
+  pull_request:
+    paths:
+      - 'AI*.list'
+      - 'AppleIntelligence.list'
+      - 'sources/chatgpt-voice.json'
+      - 'scripts/ai_rules.py'
+      - 'tests/ai-routing.json'
+      - '.github/workflows/check-ai-rules.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Validate maintained rules and official voice snapshot
+        run: python3 scripts/ai_rules.py

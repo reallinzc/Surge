@@ -1,0 +1,13 @@
+# NAME: AppleIntelligence
+# MAINTAINER: reallinzc
+# REVIEWED: 2026-09-16
+# SOURCE: https://support.apple.com/101555
+# Preserves the existing Siri and Private Cloud Compute scope.
+# gspe1-ssl.ls.apple.com is intentionally excluded: shared with other Apple services.
+
+DOMAIN,guzzoni.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,cp4.cloudflare.com
+DOMAIN,apple-relay.apple.com

@@ -1,5 +1,14 @@
 # Surge
 
+## AI 规则
+
+自行维护的 AI 域名、ChatGPT 语音 IP 和 Apple Intelligence 规则。
+来源、更新方法与 Surge 引用示例见 [AI 规则维护](docs/ai-rules.md)。
+
+- [AI.list](AI.list)：Meta AI、OpenAI、Claude、Gemini、Copilot、Cursor 等
+- [AI-IP.list](AI-IP.list)：OpenAI 官方 ChatGPT 实时语音 IP
+- [AppleIntelligence.list](AppleIntelligence.list)：Siri / Private Cloud Compute
+
 ## Telegram DC regional rules
 
 Surge rule sets that split Telegram's official address space by the lowest

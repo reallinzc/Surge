@@ -1,0 +1,498 @@
+[
+  {
+    "host": "ai.meta.com",
+    "ai": true
+  },
+  {
+    "host": "ai.studio",
+    "ai": true
+  },
+  {
+    "host": "aicode.googleapis.com",
+    "ai": true
+  },
+  {
+    "host": "aida.googleapis.com",
+    "ai": true
+  },
+  {
+    "host": "aidemos.meta.com",
+    "ai": true
+  },
+  {
+    "host": "aisandbox-pa.googleapis.com",
+    "ai": true
+  },
+  {
+    "host": "antigravity-pa.googleapis.com",
+    "ai": true
+  },
+  {
+    "host": "antigravity-unleash.goog",
+    "ai": true
+  },
+  {
+    "host": "antigravity.google",
+    "ai": true
+  },
+  {
+    "host": "antigravity.googleapis.com",
+    "ai": true
+  },
+  {
+    "host": "api.anthropic.com",
+    "ai": true
+  },
+  {
+    "host": "api.cursor.sh",
+    "ai": true
+  },
+  {
+    "host": "api.openai.com",
+    "ai": true
+  },
+  {
+    "host": "apple-relay.apple.com",
+    "ai": true
+  },
+  {
+    "host": "auth.meta.ai",
+    "ai": true
+  },
+  {
+    "host": "auth.meta.com",
+    "ai": true
+  },
+  {
+    "host": "browser-intake-us5-datadoghq.com",
+    "ai": true
+  },
+  {
+    "host": "chatgpt.com",
+    "ai": true
+  },
+  {
+    "host": "chatgpt.livekit.cloud",
+    "ai": true
+  },
+  {
+    "host": "clau.de",
+    "ai": true
+  },
+  {
+    "host": "claude.ai",
+    "ai": true
+  },
+  {
+    "host": "claude.com",
+    "ai": true
+  },
+  {
+    "host": "claudemcpclient.com",
+    "ai": true
+  },
+  {
+    "host": "claudemcpcontent.com",
+    "ai": true
+  },
+  {
+    "host": "claudeusercontent.com",
+    "ai": true
+  },
+  {
+    "host": "cloudaicompanion.googleapis.com",
+    "ai": true
+  },
+  {
+    "host": "codeium.com",
+    "ai": true
+  },
+  {
+    "host": "codeiumdata.com",
+    "ai": true
+  },
+  {
+    "host": "copilot-proxy.githubusercontent.com",
+    "ai": true
+  },
+  {
+    "host": "copilot-stg.com",
+    "ai": true
+  },
+  {
+    "host": "copilot-workspace.githubnext.com",
+    "ai": true
+  },
+  {
+    "host": "copilot.cloud.microsoft",
+    "ai": true
+  },
+  {
+    "host": "copilot.com",
+    "ai": true
+  },
+  {
+    "host": "copilot.microsoft.com",
+    "ai": true
+  },
+  {
+    "host": "copilotprodattachments.blob.core.windows.net",
+    "ai": true
+  },
+  {
+    "host": "cursor-cdn.com",
+    "ai": true
+  },
+  {
+    "host": "cursor.com",
+    "ai": true
+  },
+  {
+    "host": "cursorapi.com",
+    "ai": true
+  },
+  {
+    "host": "edgeservices.bing.com",
+    "ai": true
+  },
+  {
+    "host": "events.statsigapi.net",
+    "ai": true
+  },
+  {
+    "host": "flow.google",
+    "ai": true
+  },
+  {
+    "host": "gateway.bingviz.microsoft.net",
+    "ai": true
+  },
+  {
+    "host": "gateway.bingviz.microsoftapp.net",
+    "ai": true
+  },
+  {
+    "host": "gemini.google.com",
+    "ai": true
+  },
+  {
+    "host": "gemini.gstatic.com",
+    "ai": true
+  },
+  {
+    "host": "githubcopilot.com",
+    "ai": true
+  },
+  {
+    "host": "graph.meta.ai",
+    "ai": true
+  },
+  {
+    "host": "grok.com",
+    "ai": true
+  },
+  {
+    "host": "grok.x.com",
+    "ai": true
+  },
+  {
+    "host": "grokipedia.com",
+    "ai": true
+  },
+  {
+    "host": "guzzoni.apple.com",
+    "ai": true
+  },
+  {
+    "host": "host.livekit.cloud",
+    "ai": true
+  },
+  {
+    "host": "http-intake.logs.us5.datadoghq.com",
+    "ai": true
+  },
+  {
+    "host": "imagine.meta.com",
+    "ai": true
+  },
+  {
+    "host": "jules.google",
+    "ai": true
+  },
+  {
+    "host": "jules.google.com",
+    "ai": true
+  },
+  {
+    "host": "labs.google",
+    "ai": true
+  },
+  {
+    "host": "labs.google.com",
+    "ai": true
+  },
+  {
+    "host": "notebook.google.com",
+    "ai": true
+  },
+  {
+    "host": "notebooklm-pa.googleapis.com",
+    "ai": true
+  },
+  {
+    "host": "notebooklm.google.com",
+    "ai": true
+  },
+  {
+    "host": "notebooklm.googleapis.com",
+    "ai": true
+  },
+  {
+    "host": "oaistatsig.com",
+    "ai": true
+  },
+  {
+    "host": "oaiusercontent.com",
+    "ai": true
+  },
+  {
+    "host": "opal.google",
+    "ai": true
+  },
+  {
+    "host": "opal.google.com",
+    "ai": true
+  },
+  {
+    "host": "openrouter.ai",
+    "ai": true
+  },
+  {
+    "host": "perplexity.ai",
+    "ai": true
+  },
+  {
+    "host": "perplexity.com",
+    "ai": true
+  },
+  {
+    "host": "poe.com",
+    "ai": true
+  },
+  {
+    "host": "poecdn.net",
+    "ai": true
+  },
+  {
+    "host": "ppl-ai-file-upload.s3.amazonaws.com",
+    "ai": true
+  },
+  {
+    "host": "pplx-res.cloudinary.com",
+    "ai": true
+  },
+  {
+    "host": "pplx.ai",
+    "ai": true
+  },
+  {
+    "host": "robinfrontend-pa.googleapis.com",
+    "ai": true
+  },
+  {
+    "host": "servd-anthropic-website.b-cdn.net",
+    "ai": true
+  },
+  {
+    "host": "services.bingapis.com",
+    "ai": true
+  },
+  {
+    "host": "stitch.withgoogle.com",
+    "ai": true
+  },
+  {
+    "host": "sydney.bing.com",
+    "ai": true
+  },
+  {
+    "host": "turn.livekit.cloud",
+    "ai": true
+  },
+  {
+    "host": "windsurf.build",
+    "ai": true
+  },
+  {
+    "host": "windsurf.com",
+    "ai": true
+  },
+  {
+    "host": "www.meta.ai",
+    "ai": true
+  },
+  {
+    "host": "www.facebook.com",
+    "ai": false
+  },
+  {
+    "host": "www.instagram.com",
+    "ai": false
+  },
+  {
+    "host": "web.whatsapp.com",
+    "ai": false
+  },
+  {
+    "host": "www.messenger.com",
+    "ai": false
+  },
+  {
+    "host": "static.xx.fbcdn.net",
+    "ai": false
+  },
+  {
+    "host": "www.google.com",
+    "ai": false
+  },
+  {
+    "host": "accounts.google.com",
+    "ai": false
+  },
+  {
+    "host": "www.youtube.com",
+    "ai": false
+  },
+  {
+    "host": "www.microsoft.com",
+    "ai": false
+  },
+  {
+    "host": "www.github.com",
+    "ai": false
+  },
+  {
+    "host": "stripe.com",
+    "ai": false
+  },
+  {
+    "host": "auth0.com",
+    "ai": false
+  },
+  {
+    "host": "sentry.io",
+    "ai": false
+  },
+  {
+    "host": "www.apple.com",
+    "ai": false
+  },
+  {
+    "host": "www.baidu.com",
+    "ai": false
+  },
+  {
+    "host": "apis.google.com",
+    "ai": false
+  },
+  {
+    "host": "colab.research.google.com",
+    "ai": false
+  },
+  {
+    "host": "developerprofiles-pa.googleapis.com",
+    "ai": false
+  },
+  {
+    "host": "102.37.57.54",
+    "ai": true
+  },
+  {
+    "host": "13.71.25.29",
+    "ai": true
+  },
+  {
+    "host": "135.220.40.201",
+    "ai": true
+  },
+  {
+    "host": "172.203.39.49",
+    "ai": true
+  },
+  {
+    "host": "172.207.173.200",
+    "ai": true
+  },
+  {
+    "host": "172.214.226.198",
+    "ai": true
+  },
+  {
+    "host": "191.233.251.27",
+    "ai": true
+  },
+  {
+    "host": "20.162.96.163",
+    "ai": true
+  },
+  {
+    "host": "20.168.48.117",
+    "ai": true
+  },
+  {
+    "host": "20.184.36.134",
+    "ai": true
+  },
+  {
+    "host": "20.203.144.245",
+    "ai": true
+  },
+  {
+    "host": "20.74.221.21",
+    "ai": true
+  },
+  {
+    "host": "4.151.200.38",
+    "ai": true
+  },
+  {
+    "host": "4.155.146.196",
+    "ai": true
+  },
+  {
+    "host": "4.197.172.116",
+    "ai": true
+  },
+  {
+    "host": "4.217.235.100",
+    "ai": true
+  },
+  {
+    "host": "4.245.198.13",
+    "ai": true
+  },
+  {
+    "host": "40.118.236.137",
+    "ai": true
+  },
+  {
+    "host": "51.4.112.173",
+    "ai": true
+  },
+  {
+    "host": "52.143.181.161",
+    "ai": true
+  },
+  {
+    "host": "68.155.152.41",
+    "ai": true
+  },
+  {
+    "host": "72.146.20.246",
+    "ai": true
+  },
+  {
+    "host": "74.248.148.7",
+    "ai": true
+  }
+]

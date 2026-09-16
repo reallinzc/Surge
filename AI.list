@@ -1,0 +1,146 @@
+# NAME: AI
+# MAINTAINER: reallinzc
+# REVIEWED: 2026-09-16
+# DESCRIPTION: Curated AI websites, APIs, authentication, files and coding assistants.
+# SOURCES / LICENSES: docs/ai-rules.md and LICENSES/
+# Rules contain no policy; use RULE-SET,.../AI.list,AI,extended-matching
+
+# Sukka AI baseline (AGPL-3.0), reviewed snapshot.
+# https://github.com/SukkaW/Surge/blob/master/Source/non_ip/ai.conf
+DOMAIN-SUFFIX,g.ai
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,ai.com
+DOMAIN-SUFFIX,dify.ai
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,openart.ai
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,clipdrop.co
+DOMAIN-SUFFIX,chatgpt.site
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN,ai.google.dev
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,gemini.google
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN,openrouter.ai
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN,api.github.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN,api.jetbrains.ai
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,geller-pa.googleapis.com
+DOMAIN,gateway.ai.cloudflare.com
+DOMAIN-SUFFIX,cloudcode-pa.googleapis.com
+DOMAIN,alkalicore-pa.clients6.google.com
+DOMAIN,daily-cloudcode-pa.googleapis.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
+URL-REGEX,https://www\.google\.com/.*continue=https://gemini\.google\.com.+
+
+# Reviewed additions: v2fly, blackmatrix7 and observed Meta AI endpoints.
+
+# Meta AI login and dedicated services; meta.ai is included above.
+DOMAIN,auth.meta.com
+DOMAIN,ai.meta.com
+DOMAIN,imagine.meta.com
+DOMAIN,aidemos.meta.com
+
+# openai：v2fly/domain-list-community
+DOMAIN-SUFFIX,oaistatsig.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN-SUFFIX,turn.livekit.cloud
+
+# anthropic：v2fly/domain-list-community
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN,servd-anthropic-website.b-cdn.net
+
+# google-deepmind：v2fly/domain-list-community
+DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com
+DOMAIN-SUFFIX,ai.studio
+DOMAIN-SUFFIX,gemini.gstatic.com
+DOMAIN,cloudaicompanion.googleapis.com
+DOMAIN,notebooklm-pa.googleapis.com
+DOMAIN,notebooklm.googleapis.com
+DOMAIN-SUFFIX,notebook.google.com
+DOMAIN-SUFFIX,jules.google
+DOMAIN-SUFFIX,jules.google.com
+DOMAIN-SUFFIX,labs.google
+DOMAIN-SUFFIX,labs.google.com
+DOMAIN-SUFFIX,flow.google
+DOMAIN-SUFFIX,aisandbox-pa.googleapis.com
+DOMAIN-SUFFIX,aicode.googleapis.com
+DOMAIN-SUFFIX,aida.googleapis.com
+DOMAIN-SUFFIX,opal.google
+DOMAIN-SUFFIX,opal.google.com
+DOMAIN,antigravity-pa.googleapis.com
+DOMAIN,antigravity.googleapis.com
+DOMAIN-SUFFIX,antigravity.google
+DOMAIN-SUFFIX,antigravity-unleash.goog
+DOMAIN-SUFFIX,stitch.withgoogle.com
+
+# github-copilot：v2fly/domain-list-community
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN,copilot-proxy.githubusercontent.com
+DOMAIN,copilot-workspace.githubnext.com
+DOMAIN,copilotprodattachments.blob.core.windows.net
+
+# cursor：v2fly/domain-list-community
+DOMAIN-SUFFIX,cursor-cdn.com
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursorapi.com
+
+# windsurf：v2fly/domain-list-community
+DOMAIN-SUFFIX,codeium.com
+DOMAIN-SUFFIX,codeiumdata.com
+DOMAIN-SUFFIX,windsurf.build
+DOMAIN-SUFFIX,windsurf.com
+
+# perplexity：v2fly/domain-list-community
+DOMAIN-SUFFIX,perplexity.com
+DOMAIN-SUFFIX,pplx.ai
+DOMAIN,ppl-ai-file-upload.s3.amazonaws.com
+DOMAIN,pplx-res.cloudinary.com
+
+# poe：v2fly/domain-list-community
+DOMAIN-SUFFIX,poecdn.net
+
+# xai：v2fly/domain-list-community
+DOMAIN-SUFFIX,grok.x.com
+DOMAIN-SUFFIX,grokipedia.com
+
+# Microsoft Copilot：v2fly + blackmatrix7 专属接口
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,copilot.com
+DOMAIN-SUFFIX,copilot.cloud.microsoft
+DOMAIN-SUFFIX,copilot-stg.com
+DOMAIN,sydney.bing.com
+DOMAIN,edgeservices.bing.com
+DOMAIN,services.bingapis.com
+DOMAIN,gateway.bingviz.microsoft.net
+DOMAIN,gateway.bingviz.microsoftapp.net
+
+# Existing AI feature-flag and telemetry exceptions.
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN,http-intake.logs.us5.datadoghq.com
+DOMAIN-SUFFIX,browser-intake-us5-datadoghq.com
