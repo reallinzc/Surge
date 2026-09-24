@@ -1,6 +1,6 @@
 # NAME: AI
 # MAINTAINER: reallinzc
-# REVIEWED: 2026-09-16
+# REVIEWED: 2026-09-24
 # DESCRIPTION: Curated AI websites, APIs, authentication, files and coding assistants.
 # SOURCES / LICENSES: docs/ai-rules.md and LICENSES/
 # Rules contain no policy; use RULE-SET,.../AI.list,AI,extended-matching
@@ -74,6 +74,9 @@ DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN,servd-anthropic-website.b-cdn.net
+# Observed 2026-09-24: Claude iOS Sentry org and Sift risk scoring, same second as claude.ai.
+DOMAIN,o1158394.ingest.us.sentry.io
+DOMAIN-SUFFIX,siftscience.com
 
 # google-deepmind：v2fly/domain-list-community
 DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com

@@ -304,6 +304,14 @@
     "ai": true
   },
   {
+    "host": "o1158394.ingest.us.sentry.io",
+    "ai": true
+  },
+  {
+    "host": "api3.siftscience.com",
+    "ai": true
+  },
+  {
     "host": "services.bingapis.com",
     "ai": true
   },
@@ -494,5 +502,9 @@
   {
     "host": "74.248.148.7",
     "ai": true
+  },
+  {
+    "host": "o999999.ingest.us.sentry.io",
+    "ai": false
   }
 ]
