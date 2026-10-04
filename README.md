@@ -14,6 +14,7 @@
 Surge rule sets that split Telegram's official address space by the lowest
 measured end-to-end path from the local Surge front end:
 
+- `AI.list` — curated AI service rules, including the Claude Priority composite for the AI policy group.
 - `TelegramDC-Americas.list`: DC1/DC3 via the Japan T1 Smart group
 - `TelegramDC-Europe.list`: DC2/DC4/DC203 via the Hong Kong T1 Smart group
 - `TelegramDC-Singapore.list`: DC5 via the Singapore V.PS node
