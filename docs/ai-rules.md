@@ -25,6 +25,10 @@ RULE-SET,https://raw.githubusercontent.com/reallinzc/Surge/main/AI-IP.list,AI,no
 Claude Code 的 Mac 进程兜底留在客户端主配置，放在明确的本机、内网及直连例外之后，
 Google、通用 CDN 和海外兜底之前；按实际二进制名匹配，避免覆盖通用 Node/Bun 进程：
 
+本地例外需要显式覆盖这两个 CLI 进程对 `localhost`、`.local`、`.lan`、`home.arpa`、
+回环及 RFC 私有地址的访问，防止本地 MCP 连接被送往远端。用 `rule match` 验证进程复合规则时，
+同时传入实际 `process-path` 与 `is-local=on`，使请求上下文与本机程序一致。
+
 ```ini
 PROCESS-NAME,/Applications/Claude.app/,AI
 PROCESS-NAME,claude,AI
@@ -88,6 +92,10 @@ git diff -- AI-IP.list sources/chatgpt-voice.json
 GitHub Actions 在相关提交与 PR 上运行离线检查，不会自动改写规则。
 上线后还需使用 Surge `external-resource list`、`profile check`、`rule match` 和
 实际请求记录验证客户端已获取文件及命中预期策略。
+
+发布后还需比较客户端实际下载内容与提交文件，而不只看资源 ready。
+GitHub Raw 加速脚本可能将 main 分支转到缓存旧内容的 CDN；客户端使用这类脚本时，
+对自维护的 `reallinzc/Surge/` 路径设置窄范围排除，随后刷新规则并核对内容。
 
 NetOps 工作区的 `rules/AI.list`、`rules/Claude-IP.list` 与本仓库发布文件同步。
 编辑前先将发布仓库快进到远端 main；同步两处后再校验、提交和推送，避免旧检出通过校验却覆盖新发布内容。
