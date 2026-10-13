@@ -51,12 +51,18 @@ def read_rules(name: str) -> list[tuple[str, str]]:
             continue
         parts = line.split(",")
         kind, value = parts[:2] if len(parts) >= 2 else ("", "")
-        if name == "AI-IP.list":
-            if kind not in ("IP-CIDR", "IP-CIDR6") or parts[2:] != ["no-resolve"]:
+        if name in ("AI-IP.list", "Claude-IP.list"):
+            if parts[2:] != ["no-resolve"]:
                 raise ValueError(f"{name}:{number}: invalid IP rule")
-            network = ipaddress.ip_network(value, strict=True)
-            if network.version != (4 if kind == "IP-CIDR" else 6) or not network.is_global:
-                raise ValueError(f"{name}:{number}: invalid address family/range")
+            if kind == "IP-ASN" and name == "Claude-IP.list":
+                if value != "399358":
+                    raise ValueError(f"{name}:{number}: ASN is not the verified Anthropic ASN")
+            elif kind in ("IP-CIDR", "IP-CIDR6"):
+                network = ipaddress.ip_network(value, strict=True)
+                if network.version != (4 if kind == "IP-CIDR" else 6) or not network.is_global:
+                    raise ValueError(f"{name}:{number}: invalid address family/range")
+            else:
+                raise ValueError(f"{name}:{number}: invalid IP rule")
         else:
             if len(parts) != 2 or kind not in ("DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-KEYWORD", "URL-REGEX"):
                 raise ValueError(f"{name}:{number}: unsupported rule or embedded policy")
@@ -72,13 +78,15 @@ def read_rules(name: str) -> list[tuple[str, str]]:
     return rules
 
 
-def matches(host: str, rules: list[tuple[str, str]]) -> bool:
+def matches(host: str, rules: list[tuple[str, str]], asn: int | None = None) -> bool:
     for kind, value in rules:
         if kind == "DOMAIN" and host == value:
             return True
         if kind == "DOMAIN-SUFFIX" and (host == value or host.endswith("." + value)):
             return True
         if kind == "DOMAIN-KEYWORD" and value in host:
+            return True
+        if kind == "IP-ASN" and asn == int(value):
             return True
         if kind in ("IP-CIDR", "IP-CIDR6"):
             try:
@@ -93,11 +101,11 @@ def check() -> None:
     expected = voice_rules(json.loads(VOICE_SOURCE.read_text()))
     if (ROOT / "AI-IP.list").read_text() != expected:
         raise ValueError("AI-IP.list differs from its source; run scripts/ai_rules.py --render-voice")
-    lists = {name: read_rules(name) for name in ("AI.list", "AppleIntelligence.list", "AI-IP.list")}
+    lists = {name: read_rules(name) for name in ("AI.list", "AppleIntelligence.list", "AI-IP.list", "Claude-IP.list")}
     rules = [rule for group in lists.values() for rule in group]
     cases = json.loads((ROOT / "tests/ai-routing.json").read_text())
     for case in cases:
-        if matches(case["host"], rules) != case["ai"]:
+        if matches(case["host"], rules, case.get("asn")) != case["ai"]:
             raise ValueError(f"routing scope changed for {case['host']}")
     print(", ".join(f"{name}: {len(rows)} rules" for name, rows in lists.items()))
     print(f"Validated syntax, duplicate entries, official voice snapshot and {len(cases)} routing cases")

@@ -14,11 +14,33 @@ RULE-SET,https://raw.githubusercontent.com/reallinzc/Surge/main/AppleIntelligenc
 RULE-SET,https://raw.githubusercontent.com/reallinzc/Surge/main/AI.list,AI,extended-matching
 
 # 放在 IP 分流段，保留 no-resolve
+RULE-SET,https://raw.githubusercontent.com/reallinzc/Surge/main/Claude-IP.list,AI,no-resolve
 RULE-SET,https://raw.githubusercontent.com/reallinzc/Surge/main/AI-IP.list,AI,no-resolve
 ```
 
 策略组 `AI` 由使用者在自己的配置里定义；规则文件不包含节点、账号、密钥或策略名。
-三份文件分开是为了保持域名规则、Apple 例外与 IP 兜底的先后关系。
+域名规则、Apple 例外、Claude IP 与语音 IP 分开维护，保持各自的先后关系。
+`AI.list` 只保存域名/URL 条件，不嵌入进程或 IP 条件。
+
+Claude Code 的 Mac 进程兜底留在客户端主配置，放在明确的本机、内网及直连例外之后，
+Google、通用 CDN 和海外兜底之前；按实际二进制名匹配，避免覆盖通用 Node/Bun 进程：
+
+```ini
+PROCESS-NAME,/Applications/Claude.app/,AI
+PROCESS-NAME,claude,AI
+PROCESS-NAME,claude.exe,AI
+```
+
+2026-10-14 补入官方开发者站 `claude.dev`，将 Claude Priority 的重复域名合并。
+保留已有的 Sentry、Datadog、Sift、Intercom 等共享服务例外；这些是历史上的全局 AI 分流选择，
+不代表它们只由 Claude 使用。`statsig.com` 未全局加入；CLI 自身的请求可由进程规则兜底。
+
+`Claude-IP.list` 使用 [Anthropic 官方 API 入站范围](https://platform.claude.com/docs/en/api/ip-addresses)
+`160.79.104.0/23` 和 `2607:6bc0::/48`，并保留注册局确认归 Anthropic 所有的
+[AS399358](https://rdap.arin.net/registry/autnum/399358)。ASN 条件覆盖范围随该网络变化，
+包含其当前公告的另一 IPv6 前缀 `2607:6bc0:11::/48`；它不宣称该前缀是官方 API 入站范围。
+移除非 Anthropic 的 AS55960、AS14201。官方 `/21` 是 Anthropic 工具调用出站范围，
+不作为客户端 API 入站 CIDR；不用整个云厂商 ASN 兜底。
 
 ## 来源与范围（2026-09-16）
 
@@ -66,3 +88,6 @@ git diff -- AI-IP.list sources/chatgpt-voice.json
 GitHub Actions 在相关提交与 PR 上运行离线检查，不会自动改写规则。
 上线后还需使用 Surge `external-resource list`、`profile check`、`rule match` 和
 实际请求记录验证客户端已获取文件及命中预期策略。
+
+NetOps 工作区的 `rules/AI.list`、`rules/Claude-IP.list` 与本仓库发布文件同步。
+编辑前先将发布仓库快进到远端 main；同步两处后再校验、提交和推送，避免旧检出通过校验却覆盖新发布内容。

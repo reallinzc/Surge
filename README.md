@@ -2,11 +2,12 @@
 
 ## AI 规则
 
-自行维护的 AI 域名、ChatGPT 语音 IP 和 Apple Intelligence 规则。
+自行维护的 AI 域名、Claude IP、ChatGPT 语音 IP 和 Apple Intelligence 规则。
 来源、更新方法与 Surge 引用示例见 [AI 规则维护](docs/ai-rules.md)。
 
 - [AI.list](AI.list)：Meta AI、OpenAI、Claude、Gemini、Copilot、Cursor 等
 - [AI-IP.list](AI-IP.list)：OpenAI 官方 ChatGPT 实时语音 IP
+- [Claude-IP.list](Claude-IP.list)：Claude API 入站 IP 与已核验的 Anthropic ASN
 - [AppleIntelligence.list](AppleIntelligence.list)：Siri / Private Cloud Compute
 
 ## Telegram DC regional rules
@@ -14,7 +15,6 @@
 Surge rule sets that split Telegram's official address space by the lowest
 measured end-to-end path from the local Surge front end:
 
-- `AI.list` — curated AI service rules, including the Claude Priority composite for the AI policy group.
 - `TelegramDC-Americas.list`: DC1/DC3 via the Japan T1 Smart group
 - `TelegramDC-Europe.list`: DC2/DC4/DC203 via the Hong Kong T1 Smart group
 - `TelegramDC-Singapore.list`: DC5 via the Singapore V.PS node

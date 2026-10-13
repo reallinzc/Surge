@@ -1,0 +1,12 @@
+# NAME: Claude-IP
+# MAINTAINER: reallinzc
+# VERIFIED: 2026-10-14
+# SOURCE: https://platform.claude.com/docs/en/api/ip-addresses
+# ASN-SOURCE: https://rdap.arin.net/registry/autnum/399358
+# API inbound ranges plus the verified Anthropic-owned ASN.
+# 160.79.104.0/21 is Anthropic tool-call outbound space, not the API inbound range.
+# Keep after domain rules, before generic IP/GEOIP fallbacks, with no-resolve.
+
+IP-CIDR,160.79.104.0/23,no-resolve
+IP-CIDR6,2607:6bc0::/48,no-resolve
+IP-ASN,399358,no-resolve

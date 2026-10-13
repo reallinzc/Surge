@@ -389,7 +389,7 @@
   },
   {
     "host": "sentry.io",
-    "ai": false
+    "ai": true
   },
   {
     "host": "www.apple.com",
@@ -505,6 +505,121 @@
   },
   {
     "host": "o999999.ingest.us.sentry.io",
+    "ai": true
+  },
+  {
+    "host": "platform.claude.com",
+    "ai": true
+  },
+  {
+    "host": "code.claude.com",
+    "ai": true
+  },
+  {
+    "host": "claude.dev",
+    "ai": true
+  },
+  {
+    "host": "www.claude.dev",
+    "ai": true
+  },
+  {
+    "host": "downloads.claude.ai",
+    "ai": true
+  },
+  {
+    "host": "mcp-proxy.anthropic.com",
+    "ai": true
+  },
+  {
+    "host": "bridge.claudeusercontent.com",
+    "ai": true
+  },
+  {
+    "host": "test.frame.claudeusercontent.com",
+    "ai": true
+  },
+  {
+    "host": "anthropic.auth0.com",
+    "ai": true
+  },
+  {
+    "host": "anthropic-com.ghost.io",
+    "ai": true
+  },
+  {
+    "host": "anthropic.com.cdn.cloudflare.net",
+    "ai": true
+  },
+  {
+    "host": "cdn.usefathom.com",
+    "ai": true
+  },
+  {
+    "host": "160.79.104.1",
+    "ai": true
+  },
+  {
+    "host": "160.79.105.254",
+    "ai": true
+  },
+  {
+    "host": "2607:6bc0::1",
+    "ai": true
+  },
+  {
+    "host": "160.79.103.255",
+    "ai": false
+  },
+  {
+    "host": "160.79.106.1",
+    "ai": false
+  },
+  {
+    "host": "160.79.107.1",
+    "ai": false
+  },
+  {
+    "host": "2607:6bc0:1::1",
+    "ai": false
+  },
+  {
+    "host": "claude.dev.example.com",
+    "ai": false
+  },
+  {
+    "host": "storage.googleapis.com",
+    "ai": false
+  },
+  {
+    "host": "registry.npmjs.org",
+    "ai": false
+  },
+  {
+    "host": "raw.githubusercontent.com",
+    "ai": false
+  },
+  {
+    "host": "54.222.88.1",
+    "ai": false
+  },
+  {
+    "host": "170.65.129.1",
+    "ai": false
+  },
+  {
+    "host": "2607:6bc0:11::1",
+    "asn": 399358,
+    "ai": true
+  },
+  {
+    "host": "54.222.88.1",
+    "asn": 55960,
+    "ai": false
+  },
+  {
+    "host": "170.65.129.1",
+    "asn": 14201,
     "ai": false
   }
 ]

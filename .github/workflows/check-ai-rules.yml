@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'AI*.list'
+      - 'Claude-IP.list'
       - 'AppleIntelligence.list'
       - 'sources/chatgpt-voice.json'
       - 'scripts/ai_rules.py'
@@ -12,6 +13,7 @@ on:
   pull_request:
     paths:
       - 'AI*.list'
+      - 'Claude-IP.list'
       - 'AppleIntelligence.list'
       - 'sources/chatgpt-voice.json'
       - 'scripts/ai_rules.py'
