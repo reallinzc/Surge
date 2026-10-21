@@ -46,6 +46,10 @@ Cloudflare Challenges 和 Segment；将原有 `cdn.usefathom.com` 扩为 `usefat
 已有 Claude、Sentry、Datadog、Sift、Intercom 规则复用原范围；
 `challenges.cloudflare.com` 只匹配精确主机，不扩为整个 Cloudflare。
 
+同日核对 [Segment 官方 SDK 说明](https://segment.com/blog/twilio-segment-edge-sdk/)，
+补入精确主机 `cdn.segment.com`，使 JavaScript SDK 下载与已有的 `api.segment.io`
+事件上报使用同一 AI 策略。其他 `segment.com` 主机继续按客户端既有规则处理。
+
 只采纳经过核对的域名条件，不导入该项目的节点、出口选择、Android 进程规则或 IPv6 拒绝规则。
 不加入 `claude` / `anthropic` / `browser-intake` / `modelcontextprotocol` 泛关键字、
 全量 Google / Gmail 后缀或 `webshare.io` 出口检测域名；Google 通用流量继续由客户端既有规则处理。

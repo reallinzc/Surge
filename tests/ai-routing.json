@@ -749,5 +749,21 @@
   {
     "host": "ipv4.webshare.io",
     "ai": false
+  },
+  {
+    "host": "cdn.segment.com",
+    "ai": true
+  },
+  {
+    "host": "segment.com",
+    "ai": false
+  },
+  {
+    "host": "cdn.segment.com.example.com",
+    "ai": false
+  },
+  {
+    "host": "unrelated.cdn.segment.com",
+    "ai": false
   }
 ]

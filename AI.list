@@ -172,5 +172,8 @@ DOMAIN-SUFFIX,stripe.network
 DOMAIN-SUFFIX,stripecdn.com
 DOMAIN,challenges.cloudflare.com
 DOMAIN-SUFFIX,segment.io
+# Segment JavaScript SDK downloads; keep with its event API above.
+# https://segment.com/blog/twilio-segment-edge-sdk/
+DOMAIN,cdn.segment.com
 DOMAIN-SUFFIX,recaptcha.net
 DOMAIN-SUFFIX,withpersona.com
