@@ -39,6 +39,18 @@ PROCESS-NAME,claude.exe,AI
 保留已有的 Sentry、Datadog、Sift、Intercom 等共享服务例外；这些是历史上的全局 AI 分流选择，
 不代表它们只由 Claude 使用。`statsig.com` 未全局加入；CLI 自身的请求可由进程规则兜底。
 
+2026-10-21 对照 [wquguru/one-exit 固定版本](https://github.com/wquguru/one-exit/tree/a34803405f7b4ddabc48081ed83929376e3c6a9d)
+的三份模板，补入 MCP 文档、GrowthBook、Stripe、Persona、hCaptcha、reCAPTCHA、
+Cloudflare Challenges 和 Segment；将原有 `cdn.usefathom.com` 扩为 `usefathom.com` 后缀。
+这些支付、验证和遥测服务为共享域名，其他网站调用它们时也会使用 AI 出口。
+已有 Claude、Sentry、Datadog、Sift、Intercom 规则复用原范围；
+`challenges.cloudflare.com` 只匹配精确主机，不扩为整个 Cloudflare。
+
+只采纳经过核对的域名条件，不导入该项目的节点、出口选择、Android 进程规则或 IPv6 拒绝规则。
+不加入 `claude` / `anthropic` / `browser-intake` / `modelcontextprotocol` 泛关键字、
+全量 Google / Gmail 后缀或 `webshare.io` 出口检测域名；Google 通用流量继续由客户端既有规则处理。
+Anthropic 入站范围继续使用下述官方 `/23` 和既有 IPv6 / ASN 条件，不采用模板中的 `/21`。
+
 `Claude-IP.list` 使用 [Anthropic 官方 API 入站范围](https://platform.claude.com/docs/en/api/ip-addresses)
 `160.79.104.0/23` 和 `2607:6bc0::/48`，并保留注册局确认归 Anthropic 所有的
 [AS399358](https://rdap.arin.net/registry/autnum/399358)。ASN 条件覆盖范围随该网络变化，

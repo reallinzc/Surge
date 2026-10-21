@@ -381,7 +381,7 @@
   },
   {
     "host": "stripe.com",
-    "ai": false
+    "ai": true
   },
   {
     "host": "auth0.com",
@@ -620,6 +620,134 @@
   {
     "host": "170.65.129.1",
     "asn": 14201,
+    "ai": false
+  },
+  {
+    "host": "modelcontextprotocol.io",
+    "ai": true
+  },
+  {
+    "host": "docs.modelcontextprotocol.io",
+    "ai": true
+  },
+  {
+    "host": "cdn.growthbook.io",
+    "ai": true
+  },
+  {
+    "host": "usefathom.com",
+    "ai": true
+  },
+  {
+    "host": "hcaptcha.com",
+    "ai": true
+  },
+  {
+    "host": "js.hcaptcha.com",
+    "ai": true
+  },
+  {
+    "host": "api.stripe.com",
+    "ai": true
+  },
+  {
+    "host": "m.stripe.network",
+    "ai": true
+  },
+  {
+    "host": "stripecdn.com",
+    "ai": true
+  },
+  {
+    "host": "challenges.cloudflare.com",
+    "ai": true
+  },
+  {
+    "host": "cdn.segment.io",
+    "ai": true
+  },
+  {
+    "host": "www.recaptcha.net",
+    "ai": true
+  },
+  {
+    "host": "withpersona.com",
+    "ai": true
+  },
+  {
+    "host": "inquiry.withpersona.com",
+    "ai": true
+  },
+  {
+    "host": "claude.example.com",
+    "ai": false
+  },
+  {
+    "host": "anthropic.example.com",
+    "ai": false
+  },
+  {
+    "host": "browser-intake.example.com",
+    "ai": false
+  },
+  {
+    "host": "modelcontextprotocol.example.com",
+    "ai": false
+  },
+  {
+    "host": "stripe.com.example.com",
+    "ai": false
+  },
+  {
+    "host": "notstripe.com",
+    "ai": false
+  },
+  {
+    "host": "challenges.cloudflare.com.example.com",
+    "ai": false
+  },
+  {
+    "host": "unrelated.challenges.cloudflare.com",
+    "ai": false
+  },
+  {
+    "host": "www.cloudflare.com",
+    "ai": false
+  },
+  {
+    "host": "challenges.example.com",
+    "ai": false
+  },
+  {
+    "host": "withpersona.com.example.com",
+    "ai": false
+  },
+  {
+    "host": "growthbook.io.example.com",
+    "ai": false
+  },
+  {
+    "host": "oauth2.googleapis.com",
+    "ai": false
+  },
+  {
+    "host": "www.gstatic.com",
+    "ai": false
+  },
+  {
+    "host": "mail.google.com",
+    "ai": false
+  },
+  {
+    "host": "gmail.com",
+    "ai": false
+  },
+  {
+    "host": "lh3.googleusercontent.com",
+    "ai": false
+  },
+  {
+    "host": "ipv4.webshare.io",
     "ai": false
   }
 ]

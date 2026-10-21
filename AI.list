@@ -159,4 +159,18 @@ DOMAIN-KEYWORD,datadog
 DOMAIN-KEYWORD,sift
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN,cdn.usefathom.com
+
+# Reviewed one-exit additions: MCP, billing, verification and telemetry dependencies.
+# https://github.com/wquguru/one-exit/tree/a34803405f7b4ddabc48081ed83929376e3c6a9d
+# Shared payment/verification services also follow AI when used by other sites.
+DOMAIN-SUFFIX,modelcontextprotocol.io
+DOMAIN-SUFFIX,growthbook.io
+DOMAIN-SUFFIX,usefathom.com
+DOMAIN-SUFFIX,hcaptcha.com
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,stripe.network
+DOMAIN-SUFFIX,stripecdn.com
+DOMAIN,challenges.cloudflare.com
+DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,recaptcha.net
+DOMAIN-SUFFIX,withpersona.com
