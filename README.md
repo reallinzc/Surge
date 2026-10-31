@@ -10,6 +10,20 @@
 - [Claude-IP.list](Claude-IP.list)：Claude API 入站 IP 与已核验的 Anthropic ASN
 - [AppleIntelligence.list](AppleIntelligence.list)：Siri / Private Cloud Compute
 
+## Google 规则
+
+[Google.list](Google.list) 由 `scripts/google_rules.py` 从 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
+的 `data/google` 生成（展开 include，`full:` → `DOMAIN`，域名 → `DOMAIN-SUFFIX`；`regexp:` 无 Surge 对应写法，跳过并在文件头列出）。
+另外人工补充：v2fly 缺失、但实测解析到 AS15169 的 Google 域名，AS15169 的 IP 段，以及 Google Drive 的 UA。
+
+- 文件头记录上游提交；`python3 scripts/google_rules.py` 会在该提交上重新生成并逐字节比对，同时校验。
+- 校验项：不带点的后缀只允许 Google 品牌 TLD（`.google`、`.youtube` 等，不含 `.app`/`.dev` 这类公开注册的 TLD），并且必须通过 `tests/google-routing.json` 中的必中/必不中用例。
+- GitHub Actions 每天跑 `--update`，规则有变化才提交。
+
+```ini
+RULE-SET,https://raw.githubusercontent.com/reallinzc/Surge/main/Google.list,Google,extended-matching,no-resolve
+```
+
 ## Telegram DC regional rules
 
 Surge rule sets that split Telegram's official address space by the lowest

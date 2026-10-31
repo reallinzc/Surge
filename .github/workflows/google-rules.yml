@@ -1,0 +1,51 @@
+name: Google rules
+
+on:
+  push:
+    paths:
+      - 'Google.list'
+      - 'scripts/google_rules.py'
+      - 'tests/google-routing.json'
+      - '.github/workflows/google-rules.yml'
+  pull_request:
+    paths:
+      - 'Google.list'
+      - 'scripts/google_rules.py'
+      - 'tests/google-routing.json'
+      - '.github/workflows/google-rules.yml'
+  schedule:
+    - cron: "41 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Regenerate at the pinned v2fly commit and validate
+        run: python3 scripts/google_rules.py
+
+  update:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - name: Regenerate from v2fly master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/google_rules.py --update
+      - name: Commit when rules changed
+        run: |
+          git diff --quiet -- Google.list && exit 0
+          commit=$(sed -n 's/^# UPSTREAM-COMMIT: //p' Google.list)
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898299+github-actions[bot]@users.noreply.github.com'
+          git add Google.list
+          git commit -m "Update Google.list from v2fly ${commit:0:12}"
+          git push
