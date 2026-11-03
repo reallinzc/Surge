@@ -765,5 +765,93 @@
   {
     "host": "unrelated.cdn.segment.com",
     "ai": false
+  },
+  {
+    "host": "ct.sendgrid.net",
+    "ai": true
+  },
+  {
+    "host": "u123.ct.sendgrid.net",
+    "ai": true
+  },
+  {
+    "host": "api.sendgrid.net",
+    "ai": false
+  },
+  {
+    "host": "workoscdn.com",
+    "ai": true
+  },
+  {
+    "host": "accounts.spacex.ai",
+    "ai": true
+  },
+  {
+    "host": "www.spacex.com",
+    "ai": false
+  },
+  {
+    "host": "cdn.workos.com",
+    "ai": true
+  },
+  {
+    "host": "forwarder.workos.com",
+    "ai": true
+  },
+  {
+    "host": "setup.workos.com",
+    "ai": true
+  },
+  {
+    "host": "api.workos.com",
+    "ai": false
+  },
+  {
+    "host": "anysphere-binaries.s3.us-east-1.amazonaws.com",
+    "ai": true
+  },
+  {
+    "host": "s3.us-east-1.amazonaws.com",
+    "ai": false
+  },
+  {
+    "host": "assets.grokusercontent.com",
+    "ai": true
+  },
+  {
+    "host": "flow.google.com",
+    "ai": true
+  },
+  {
+    "host": "www.midjourney.com",
+    "ai": true
+  },
+  {
+    "host": "api.mistral.ai",
+    "ai": true
+  },
+  {
+    "host": "api.grazie.ai",
+    "ai": true
+  },
+  {
+    "host": "huggingface.co",
+    "ai": true
+  },
+  {
+    "host": "cdn-lfs.hf.co",
+    "ai": true
+  },
+  {
+    "host": "x.hf.space",
+    "ai": true
+  },
+  {
+    "host": "manus.im",
+    "ai": true
+  },
+  {
+    "host": "files.manuscdn.com",
+    "ai": true
   }
 ]

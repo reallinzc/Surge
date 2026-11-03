@@ -177,3 +177,28 @@ DOMAIN-SUFFIX,segment.io
 DOMAIN,cdn.segment.com
 DOMAIN-SUFFIX,recaptcha.net
 DOMAIN-SUFFIX,withpersona.com
+
+# Client supplements migrated from the shared Surge profile on 2026-11-03.
+# Previously inline rules placed directly before this list, so routing order is unchanged.
+# OpenAI network dependencies: SendGrid click tracking and WorkOS CDN.
+DOMAIN-SUFFIX,ct.sendgrid.net
+DOMAIN-SUFFIX,workoscdn.com
+# Cursor login (observed 2026-09-30) and official binary downloads.
+DOMAIN-SUFFIX,accounts.spacex.ai
+DOMAIN,cdn.workos.com
+DOMAIN,forwarder.workos.com
+DOMAIN,setup.workos.com
+DOMAIN-SUFFIX,anysphere-binaries.s3.us-east-1.amazonaws.com
+# xAI user content.
+DOMAIN-SUFFIX,grokusercontent.com
+# Google Flow on google.com (flow.google is listed above).
+DOMAIN-SUFFIX,flow.google.com
+# Other AI services.
+DOMAIN-SUFFIX,midjourney.com
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,hf.co
+DOMAIN-SUFFIX,hf.space
+DOMAIN-SUFFIX,manus.im
+DOMAIN-SUFFIX,manuscdn.com

@@ -24,6 +24,15 @@
 RULE-SET,https://raw.githubusercontent.com/reallinzc/Surge/main/Google.list,Google,extended-matching,no-resolve
 ```
 
+## Apple TV 规则
+
+[AppleTV.list](AppleTV.list)：补充 `ruleset.skk.moe` `non_ip/stream.conf` 未覆盖的 `tv.apple.com` 与 Apple TV App UA。
+macOS 进程规则 `PROCESS-NAME,TV` 留在客户端配置。
+
+```ini
+RULE-SET,https://raw.githubusercontent.com/reallinzc/Surge/main/AppleTV.list,Media,extended-matching
+```
+
 ## Telegram DC regional rules
 
 Surge rule sets that split Telegram's official address space by the lowest

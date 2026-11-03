@@ -1,0 +1,10 @@
+# NAME: AppleTV
+# MAINTAINER: reallinzc
+# DESCRIPTION: Apple TV app supplements not covered by ruleset.skk.moe non_ip/stream.conf.
+# Rules contain no policy; place directly before the generic stream rule set:
+# RULE-SET,https://raw.githubusercontent.com/reallinzc/Surge/main/AppleTV.list,Media,extended-matching
+# The macOS app process (PROCESS-NAME,TV) stays in the client profile.
+
+DOMAIN-SUFFIX,tv.apple.com
+USER-AGENT,AppleTV*
+USER-AGENT,com.apple.tv*
