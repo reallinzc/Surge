@@ -864,27 +864,27 @@
   },
   {
     "host": "smp-device-content.apple.com",
-    "ai": true
+    "ai": false
   },
   {
     "host": "xp.apple.com",
-    "ai": true
+    "ai": false
   },
   {
     "host": "mesu.apple.com",
-    "ai": true
+    "ai": false
   },
   {
     "host": "itunes.apple.com",
-    "ai": true
+    "ai": false
   },
   {
     "host": "bag.itunes.apple.com",
-    "ai": true
+    "ai": false
   },
   {
     "host": "gateway.icloud.com",
-    "ai": true
+    "ai": false
   },
   {
     "host": "p150-acsegateway.icloud.com",
@@ -892,11 +892,11 @@
   },
   {
     "host": "setup.icloud.com",
-    "ai": true
+    "ai": false
   },
   {
     "host": "cvws.icloud-content.com",
-    "ai": true
+    "ai": false
   },
   {
     "host": "siri-services.apple.com",

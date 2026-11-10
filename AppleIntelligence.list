@@ -2,10 +2,11 @@
 # MAINTAINER: reallinzc
 # REVIEWED: 2026-11-10
 # SOURCE: https://support.apple.com/101555
-# Siri, Private Cloud Compute, plus the Apple Intelligence region/eligibility
-# set (location, asset catalog, iCloud setup, iTunes bag) chosen on 2026-11-10.
-# Shared hosts (gspe1-ssl.ls.apple.com, icloud-content.com, mesu, itunes) are
-# included on purpose; DOMAIN-KEYWORD,siri matches any host containing "siri".
+# Siri, Private Cloud Compute, plus Apple Intelligence region checks.
+# Asset/update downloads (mesu, xp, smp-device-content, itunes) and general
+# iCloud (gateway, setup, icloud-content) are left to the client's Apple rules.
+# gspe1-ssl.ls.apple.com is shared with Maps location; DOMAIN-KEYWORD,siri
+# matches any host containing "siri". Both are included on purpose.
 
 # Siri
 DOMAIN,guzzoni.apple.com
@@ -18,17 +19,9 @@ DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,cp4.cloudflare.com
 DOMAIN,apple-relay.apple.com
 
-# Region / eligibility / model assets
+# Region / eligibility
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN,gspe1-ssl.ls.apple.com
-DOMAIN-SUFFIX,smp-device-content.apple.com
-DOMAIN-SUFFIX,xp.apple.com
-DOMAIN-SUFFIX,mesu.apple.com
-DOMAIN-SUFFIX,itunes.apple.com
-DOMAIN,bag.itunes.apple.com
 
-# iCloud setup / gateway
-DOMAIN,gateway.icloud.com
+# iCloud account services
 DOMAIN,p150-acsegateway.icloud.com
-DOMAIN,setup.icloud.com
-DOMAIN-SUFFIX,icloud-content.com
