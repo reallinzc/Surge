@@ -853,5 +853,57 @@
   {
     "host": "files.manuscdn.com",
     "ai": true
+  },
+  {
+    "host": "gs-loc-cn.apple.com",
+    "ai": true
+  },
+  {
+    "host": "gspe1-ssl.ls.apple.com",
+    "ai": true
+  },
+  {
+    "host": "smp-device-content.apple.com",
+    "ai": true
+  },
+  {
+    "host": "xp.apple.com",
+    "ai": true
+  },
+  {
+    "host": "mesu.apple.com",
+    "ai": true
+  },
+  {
+    "host": "itunes.apple.com",
+    "ai": true
+  },
+  {
+    "host": "bag.itunes.apple.com",
+    "ai": true
+  },
+  {
+    "host": "gateway.icloud.com",
+    "ai": true
+  },
+  {
+    "host": "p150-acsegateway.icloud.com",
+    "ai": true
+  },
+  {
+    "host": "setup.icloud.com",
+    "ai": true
+  },
+  {
+    "host": "cvws.icloud-content.com",
+    "ai": true
+  },
+  {
+    "host": "siri-services.apple.com",
+    "ai": true
+  },
+  {
+    "host": "smoot.apple.com",
+    "ai": true
   }
 ]

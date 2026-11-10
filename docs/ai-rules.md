@@ -84,9 +84,13 @@ Anthropic 入站范围继续使用下述官方 `/23` 和既有 IPv6 / ASN 条件
   [QuixoticHeart AI](https://github.com/QuixoticHeart/rule-set/blob/ruleset/surge/ai.list)。
 - [OpenAI 官方语音 IP](https://openai.com/chatgpt-voice.json)：保存为
   `sources/chatgpt-voice.json`，生成 `AI-IP.list`。初始版本为 23 个 IPv4 /32。
-- Apple Intelligence 保留既有 Siri / Private Cloud Compute 的六条范围；
+- Apple Intelligence 包含 Siri / Private Cloud Compute 的六条范围，
   [Apple 企业网络要求](https://support.apple.com/101555) 是服务用途参考。
-  不引入同时影响地图等服务的 `gspe1-ssl.ls.apple.com`。
+  2026-11-10 按使用者选择并入社区流传的 Apple Intelligence 可用性规则：
+  定位（`gs-loc-cn`、`gspe1-ssl.ls`）、资源目录（`smp-device-content`、`xp`、`mesu`）、
+  `itunes.apple.com`、iCloud 设置网关与 `icloud-content.com`，以及 `DOMAIN-KEYWORD,siri`。
+  这些是共享域名：地图定位、系统更新、App Store、iCloud 文件/照片下载
+  以及任何含 `siri` 的主机名也会走 AI 出口。`chatgpt.com`、`openai.com` 已由 `AI.list` 覆盖，不重复列入。
 
 Meta AI 独立站的登录入口与主站应使用同一出口。Facebook、Instagram、WhatsApp、
 Messenger 与共享 CDN 仍由各自规则处理；本列表不声称覆盖它们内部所有 AI 请求。

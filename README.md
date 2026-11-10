@@ -8,7 +8,7 @@
 - [AI.list](AI.list)：Meta AI、OpenAI、Claude、Gemini、Copilot、Cursor 等
 - [AI-IP.list](AI-IP.list)：OpenAI 官方 ChatGPT 实时语音 IP
 - [Claude-IP.list](Claude-IP.list)：Claude API 入站 IP 与已核验的 Anthropic ASN
-- [AppleIntelligence.list](AppleIntelligence.list)：Siri / Private Cloud Compute
+- [AppleIntelligence.list](AppleIntelligence.list)：Siri / Private Cloud Compute / Apple Intelligence 可用性检测（定位、资源目录、iCloud 设置）
 
 ## Google 规则
 
